@@ -1,0 +1,6 @@
+album_number=307340
+mod_base=150
+selected_index=140
+selected_sequence_id=HDID_scaffold0000126
+mapping_source=docs/lab2_sequences_id.txt
+

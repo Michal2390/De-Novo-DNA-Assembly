@@ -1,0 +1,23 @@
+# Python/IDE
+.venv/
+.pytest_cache/
+.idea/
+**/__pycache__/
+
+# Local helper scripts
+/tmp_urls.py
+
+# Large/generated data from labs
+lab1/output/
+lab1/tmp/
+lab2/tmp/
+lab2/output/single_scaffold.fa.maker.output/
+
+# Keep selected small lab2 artifacts but ignore huge source datasets
+lab2/input/hymenolepis_diminuta.PRJEB507.WBPS10.genomic.fa
+lab2/input/hymenolepis_diminuta.PRJEB507.WBPS10.genomic.fa.gz
+lab2/input/hymenolepis_diminuta.PRJEB507.WBPS10.mRNA_transcripts.fa
+lab2/input/hymenolepis_diminuta.PRJEB507.WBPS10.mRNA_transcripts.fa.gz
+lab2/input/hymenolepis_diminuta.PRJEB507.WBPS10.protein.fa
+lab2/input/hymenolepis_diminuta.PRJEB507.WBPS10.protein.fa.gz
+
