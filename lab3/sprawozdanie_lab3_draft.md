@@ -39,7 +39,8 @@ Odpowiedzi:
 
 Zrzut ekranu IGV (widok wariantu `chr1:156510654`):
 
-![IGV BAM chr1 156510654](output/igv_bam_chr1_156510654.png)
+<img width="1550" height="870" alt="image" src="https://github.com/user-attachments/assets/d8b45b2f-e433-41b3-8af3-542302d4295d" />
+
 
 ## 5. Wykrywanie wariantow
 
