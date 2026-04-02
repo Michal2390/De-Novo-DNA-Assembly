@@ -39,7 +39,8 @@ Odpowiedzi:
 
 Zrzut ekranu IGV (widok wariantu `chr1:156510654`):
 
-<img width="1550" height="870" alt="image" src="https://github.com/user-attachments/assets/d8b45b2f-e433-41b3-8af3-542302d4295d" />
+<img width="1919" height="278" alt="image" src="https://github.com/user-attachments/assets/703bbdcd-ab12-468f-889a-acd01ebbb1ac" />
+
 
 
 ## 5. Wykrywanie wariantow
