@@ -37,7 +37,9 @@ Odpowiedzi:
 - Allele (z DP4): ref `18`, alt `22`.
 - Genotyp: `0/1` -> wariant heterozygotyczny.
 
-Uwaga: zrzut ekranu z IGV nalezy dodac po lokalnym otwarciu pliku BAM w aplikacji GUI.
+Zrzut ekranu IGV (widok wariantu `chr1:156510654`):
+
+![IGV BAM chr1 156510654](output/igv_bam_chr1_156510654.png)
 
 ## 5. Wykrywanie wariantow
 
