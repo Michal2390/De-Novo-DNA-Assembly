@@ -1,156 +1,152 @@
-## Dane wejsciowe
+# 🧩 Sprawozdanie — Lab 2: Adnotacja DNA
 
-- Numer albumu: `307340`
-- Wyliczenie indeksu: `307340 mod 150 = 140`
-- Wybrany identyfikator sekwencji: `HDID_scaffold0000126`
-- Zrodlo mapowania: `docs/lab2_sequences_id.txt`
-- Instrukcja: `docs/mbi_lab_2.pdf`
+> **Cel:** Wybór, maskowanie i adnotacja wybranego scaffoldu genomowego *Hymenolepis diminuta*, oraz implementacja konwersji aminokwasów do RNA.
 
-## 2.2 Przygotowanie danych
+![Lab](https://img.shields.io/badge/Lab-2-orange)
+![Tool](https://img.shields.io/badge/tools-RepeatMasker%20%7C%20Maker%20%7C%20BLAST-informational)
+![Status](https://img.shields.io/badge/status-complete-success)
+![Organism](https://img.shields.io/badge/organism-Hymenolepis%20diminuta-9cf)
+
+---
+
+## 📋 Dane wejściowe
+
+| Element | Wartość |
+|---------|---------|
+| Numer albumu | `307340` |
+| Wyliczenie indeksu | `307340 mod 150 = 140` |
+| Wybrany scaffold | `HDID_scaffold0000126` |
+| Źródło mapowania | `docs/lab2_sequences_id.txt` |
+| Instrukcja | `docs/mbi_lab_2.pdf` |
+
+---
+
+## 2.2 📥 Przygotowanie danych
 
 - Wybrany identyfikator: `HDID_scaffold0000126`
-- Plik wyjsciowy po ekstrakcji: `input/single_scaffold.fa`
-- Polecenie (lokalne):
+- Plik wyjściowy po ekstrakcji: `input/single_scaffold.fa`
 
-```text
-python lab2/scripts/select_scaffold.py --album 307340 --mapping docs/lab2_sequences_id.txt --input-fasta lab2/input/hymenolepis_diminuta.PRJEB507.WBPS10.genomic.fa --output-fasta lab2/input/single_scaffold.fa
+```bash
+python lab2/scripts/select_scaffold.py \
+  --album 307340 \
+  --mapping docs/lab2_sequences_id.txt \
+  --input-fasta lab2/input/hymenolepis_diminuta.PRJEB507.WBPS10.genomic.fa \
+  --output-fasta lab2/input/single_scaffold.fa
 ```
 
-## 2.3 Maskowanie genomu (RepeatMasker)
+---
 
-- Plik wejsciowy: `input/single_scaffold.fa`
-- Plik zamaskowany: `input/single_scaffold.fa.masked`
-- Statystyki maskowania:
-  - `sequence_length = 118160`
-  - `masked_positions = 759`
-  - `masked_percent = 0.6423`
+## 2.3 🧹 Maskowanie genomu (RepeatMasker)
 
-Pytania:
-1. Ile nukleotydow zostalo zamaskowanych?
-   - Zamaskowano `759` nukleotydow.
-2. Czy to pojedyncze nukleotydy czy ciagi?
-   - To ciagi nukleotydow. Wykryto `17` ciagow zamaskowanych pozycji, `singletons = 0`,
-     najdluzszy ciag ma dlugosc `82`, srednia dlugosc ciagu to `44.65`.
-3. Jak maskowanie moze wplynac na mapowanie mRNA/bialek?
-   - Ogranicza falszywe dopasowania w regionach repetytywnych i zwykle poprawia specyficznosc mapowania.
+| Parametr | Wartość |
+|----------|---------|
+| Plik wejściowy | `input/single_scaffold.fa` |
+| Plik zamaskowany | `input/single_scaffold.fa.masked` |
+| Długość sekwencji | `118 160 bp` |
+| Zamaskowane pozycje | `759` |
+| Procent maskowania | `0.6423 %` |
 
-## 2.4 Mapowanie i adnotacja strukturalna (Maker)
+**Odpowiedzi na pytania:**
+
+> 1️⃣ **Ile nukleotydów zostało zamaskowanych?**
+> Zamaskowano `759` nukleotydów.
+
+> 2️⃣ **Czy to pojedyncze nukleotydy czy ciągi?**
+> To ciągi: wykryto `17` ciągów, `singletons = 0`, najdłuższy ciąg `82 bp`, średnia długość `44.65 bp`.
+
+> 3️⃣ **Jak maskowanie wpływa na mapowanie?**
+> Ogranicza fałszywe dopasowania w regionach repetytywnych i poprawia specyficzność mapowania mRNA/białek.
+
+---
+
+## 2.4 🗺️ Mapowanie i adnotacja strukturalna (Maker)
 
 - Plik GFF: `output/HDID_scaffold0000126.maker.gff`
-- Pierwsze 10 linii z pliku GFF:
+
+| Typ cechy | Liczba |
+|-----------|--------|
+| `expressed_sequence_match` | **8** |
+| `protein_match` | **17** |
+
+Fragment pliku GFF:
 
 ```text
 ##gff-version 3
-HDID_scaffold0000126	.	contig	1	118160	.	.	.	ID=HDID_scaffold0000126;Name=HDID_scaffold0000126
-###
-HDID_scaffold0000126	repeatmasker	match	4417	5012	891	+	.	ID=HDID_scaffold0000126:hit:0:1.3.0.0;Name=species:Mariner-9_HSal|genus:DNA%2FTcMar-Tc1;Target=species:Mariner-9_HSal|genus:DNA%2FTcMar-Tc1 574 1141 +
-HDID_scaffold0000126	repeatmasker	match_part	4417	5012	891	+	.	ID=HDID_scaffold0000126:hsp:0:1.3.0.0;Parent=HDID_scaffold0000126:hit:0:1.3.0.0;Target=species:Mariner-9_HSal|genus:DNA%252FTcMar-Tc1 574 1141 +
-HDID_scaffold0000126	repeatmasker	match	10784	10833	236	+	.	ID=HDID_scaffold0000126:hit:1:1.3.0.0;Name=species:Arnold4|genus:DNA%2FMULE-MuDR;Target=species:Arnold4|genus:DNA%2FMULE-MuDR 4256 4303 +
-HDID_scaffold0000126	repeatmasker	match_part	10784	10833	236	+	.	ID=HDID_scaffold0000126:hsp:1:1.3.0.0;Parent=HDID_scaffold0000126:hit:1:1.3.0.0;Target=species:Arnold4|genus:DNA%252FMULE-MuDR 4256 4303 +
-HDID_scaffold0000126	repeatmasker	match	38294	38328	229	+	.	ID=HDID_scaffold0000126:hit:2:1.3.0.0;Name=species:SART-1_APi|genus:LINE%2FR1;Target=species:SART-1_APi|genus:LINE%2FR1 4216 4251 +
-HDID_scaffold0000126	repeatmasker	match_part	38294	38328	229	+	.	ID=HDID_scaffold0000126:hsp:2:1.3.0.0;Parent=HDID_scaffold0000126:hit:2:1.3.0.0;Target=species:SART-1_APi|genus:LINE%252FR1 4216 4251 +
-HDID_scaffold0000126	repeatmasker	match	65992	66819	706	+	.	ID=HDID_scaffold0000126:hit:3:1.3.0.0;Name=species:Mariner-6_ACe|genus:DNA%2FTcMar-Tc1;Target=species:Mariner-6_ACe|genus:DNA%2FTcMar-Tc1 296 1106 +
+HDID_scaffold0000126  .  contig  1  118160  .  .  .  ID=HDID_scaffold0000126
+HDID_scaffold0000126  repeatmasker  match  4417  5012  891  +  .  ID=...Mariner-9_HSal
+HDID_scaffold0000126  repeatmasker  match  10784  10833  236  +  .  ID=...Arnold4
 ```
 
-- Liczba zdarzen:
-  - `expressed_sequence_match = 8`
-  - `protein_match = 17`
+**Odpowiedzi na pytania:**
 
-Pytania:
-1. Jakie informacje sa w GFF?
-   - Polozenia cech genomowych (start/stop), typ cechy, zrodlo adnotacji, strand, atrybuty ID/Name.
-2. Znaczenie typow:
-   - `expressed_sequence_match`: dopasowanie do znanej sekwencji transkryptu (mRNA/EST).
-   - `protein_match`: dopasowanie do znanej sekwencji bialka.
+> 1️⃣ **Jakie informacje są w GFF?**
+> Położenia cech genomowych (start/stop), typ cechy, źródło adnotacji, strand, atrybuty ID/Name.
 
-## 2.5 Adnotacja funkcjonalna (BLASTX)
+> 2️⃣ **Znaczenie typów:**
+> - `expressed_sequence_match` — dopasowanie do transkryptu (mRNA/EST),
+> - `protein_match` — dopasowanie do sekwencji białka.
 
-- Wybrany rekord `expressed_sequence_match`:
+---
+
+## 2.5 🔍 Adnotacja funkcjonalna (BLASTX)
+
+Wybrany rekord `expressed_sequence_match`:
 
 ```text
-HDID_scaffold0000126    blastn  expressed_sequence_match        53705   57114   224     -       .       ID=HDID_scaffold0000126:hit:7:3.2.0.0;Name=HDID_0000794201-mRNA-1
+HDID_scaffold0000126  blastn  expressed_sequence_match  53705  57114  224  -  .
+ID=HDID_scaffold0000126:hit:7:3.2.0.0;Name=HDID_0000794201-mRNA-1
 ```
 
-- Wyodrebniona sekwencja DNA (53705-57114, zapisano tez w `output/blastx_query.fa`):
+Wyodrębniona sekwencja DNA (53705–57114) zapisana w `output/blastx_query.fa`.
 
-```text
->HDID_scaffold0000126_53705_57114
-TTACAAAATGGGCAAAAGTTTCTCAATTCGTGCTTCAAGTTCTTCCGACTTTATCGATTCTAAAGCCCAGTCTGGGAGAG
-GAGCCGAATAAGACCATTCAGCACCGGAGTATCGATAAGCATGAAGGCGCAGTACAAGATTGGACATCTTGGGTTCGGCG
-AAACGACGATTGCAATCGGGGCAGTCCGGATCATGAGCAGCCTTCAAGAGAGTTAGTGTCTCTGCGTCAACAGTTGATTC
-GTCGTAATAGCGAATGCCAGAAAGTCGACGCATTTTTGCAGGTGGTGGAGAGATTTCGTCAGTGTTTGCACTTGTGTCCG
-TAACACTGTCATGTGCACTTTCGTCACTGCTCTTGTTACCGTCTTCCGTAAAATTGCTCGTGTGAGTGGCTTGGTTTTCT
-GAAGTGCCGTTTCCATAGATGACCTTAAAGGTTAGTTGGATAACGAAATTGAGTTATTTTAATAACAGGGTATAACTTGT
-TACAAAATTAGTGAGCTGCCCTTCAATCTCTAAGTGAATTATGTTCTGAGATCATCAACAAATAGCTACTAATAGCACAC
-ACAAAAATCCGACGAAATGAGACGACACGGAAGTCTATTCATTACCACTATGAATGAACTGATTATGAACAACCTAATAA
-AAATAAGCGATCCGATAACAATTACTCTTGTGGCACATCATGAACTACAAAGTCAGATTTCTGTTGTCAACACATGACCG
-ACAACAATGAATTAATTCAGGCAAAGAAATACAAAATGAAATTCATACTCCTCCTGTACATACCACCAAATGAGAAATAA
-CTAAAGTGATTTCATCATGCAGTGTAAAATATATTAACATAGCCTCAAACTTGATAAATAGTTGAAATAAATGGGTAAGA
-TACTTACAGCCGCTTTCAAGTATGCACTCCTATTCCTTGAAGTTGCAAGCGCTGTTATTAGTTCTGATCGCGGTTCTCGA
-TACTTACCAAGAGCACCCTTTGTTTCACCCCAGTCATATGAATTGTATAGGGGATCATCCACAATAGGGAAACCTGTGAA
-AATTGGAAAATTAAAAAAGTTTTACTTAATACAAATGAGTAGACATTTTAACAGAATTAAAACTTACCAAGGTATTGTAG
-ATGAACGCGCACTTGGTGTGTTCTTCCAGTGTAGAGACGAGCAAGAACAATTGTACTACCTGGACCAACCTCCTTCTGTG
-GTTTCTTCCACAGAAGTGGTACGAAAGAAGTCTTCGAGGGCTTACCGCCTTCACTTTCAGGCATTACAGCATTAAGACCC
-ATCTTATTGCAGAGGCGACCAAGTGGTTGGTCGACTATAACTGGTTTAGGAGCGTCCGATTCTTCTTCGGTACCGTGTAC
-TTCCTCTATTGACCCCTTAAAGTGACCCTCGACTTCGGCAATGTAGAACTGGCAAGAATAGTAACCTTACAGTCGTAATA
-CAAACTCATTTCGGTAAGTAAAAGTATAAGAATACAAGTTTGAAACACAAGTATCTGAACAGATCTAGCCAATTAAACCA
-AAACAAATTATTTCAAAAATATCGTTTGACAAGCGCTTTCCAGCCGTATTTTAGGACAGAATAATGGCATCCCGAAGGCT
-ATCCGAAGAAAAACTCACACTACCACCTTTGCTTTGAGCAGTTTCAACCGGTGGATTCAGACAGTCGGTTCGTTAAATGT
-GGACGGACTTCCAGCTTGGCAGCCGTGCACATTGACCGCTACGCTACATGCATATAACATAATAAATTCCAAGACTACTA
-TGAAGTGTCTACAGTACTTAACTTTGATAAACGTGAGATATTCTAGAGCCGCTATTACGAGAAATCATATTCTGGAATCT
-CAATTAAGGCCCAAAATTGATCACCGCGGTCGTCCCACCTCTTCCCACGTCACTGAATGCGCAGTTAAATCATAAAGACA
-GCACATCACGACTATAATAATTACGGAAAGGGTGGGAAGATCTGGTTCAAACGCGATTTTTACTTCTTTGTCACTTGGTT
-TAGTTCGGCGTTGTATTTTTTACCACTTTCTCAAAAAGTTATTTGAAGAGGCCCACATATTGTAAATAACATTCGGATGT
-GACATTTCAACTAACTTTTTTGTGAGATTTAAAGCATCCGGAAAGCAAGCATTGAAAATCCTTATTCATAATTAAATCTG
-AGAAATAGTGGTCCCGTTGATAGCGCATATATAGCTGAACACCTTGAACTTCACCATTTTTGTTCGATTTGTGTTTTAGA
-AGTGGACTTTCATAAAAACGAGGTCTTCTTTAGCCAGATTTTCTATCAGGTAGCTCATTTTTGTAAACAAGAGACTCGAC
-CAAGCTAGAAAGCAGCTAATTTTGACCGATTTCAATGGAAAATCAAAAGAACTCCATAATAGCATTTGAAGGGTAAAAAT
-AAACTAGAAAAAGCATACGTTACTCACTTAAACTTGCTTTAATTTAGATTACTAACGTGAAAACGTCTCTAAAATGGCAA
-TAATAAGAAAACCAAAAGTAGATAACATTAAAAGGCAATTTACCTTAACAACTTCACGGTCACTAATTTGACAAGAAATC
-TTCATCGCAGCGTCGTAAGTTTTGCCGATTAGTACCAGACCCGAGGTCATTCTGAAAATAATGCAATAAAGGATGCATAA
-ACAAAATATTAAAAAAGGCCTTAAAGAAATAACGATCCCTGGGAACGTACCTATCTAATCGATGGATAACTCGCAAATTC
-TTCATTCCCATTTCATTGTAAAGAATTTTGACCAGCGTATTGTGATGGTACTGACCACAGGGATGAATCGGCATAGACGG
-TGGTTTATTAACGACCAACATATTTTCATCCTCATGAACAACATCAATAGGCTTGTCTAAAGGAAATAGGAAAGCTAAAA
-CTACTTACCAAGAATAGGTAGCTCATGTCTATGGACATTATGCTCCAACAGATCCGAATCCCTCAGAATGTAATCCAAAG
-GCACTTTATCGCCATTCACTTTTATTTGGCCAGATAGAATTCGCTGTACCTATAGCGAATAACTAAGCCCGAACAATAAC
-AACTTACAATAACATCCATTTCATCAAAGTTGAATTCTTTGTCAAGAATATCGAGGAGTTTGCAATTCACCCATCGACGT
-TTACAGAAAGCTGTGAATATATAATGATATGGCACGACCTAAAATGAGATTAAATACTGTAAGCATACTTTCCGAAAGCC
-ATTTTCAGAGTAGTATTTTACGAATTCACCACCACTGCGAGATGCATCTCGAATTATATCTCTGCGCGTGATAATCTCTT
-TACGGAGTTTTTTGACCGAATTTGGAGTTTCGGTCTTACCAGGTGAAGCAGCAGACTCCAGCTTTTGTAATATCGTAAAA
-ACCCGCCGAAAATACGACCTCAGTGCAAGCAAATTAATTTTTAAATACAT
-```
-- 5 najblizszych organizmow + identity + E-value:
-  1. `Hymenolepis diminuta`, identity `87.69%`, E-value `2.00705e-117`
-  2. `Hymenolepis diminuta`, identity `86.89%`, E-value `7.7232e-113`
-  3. `Hymenolepis diminuta`, identity `97.92%`, E-value `3.97063e-83`
-  4. `Hymenolepis weldensis`, identity `93.06%`, E-value `1.42242e-78`
-  5. `Hymenolepis microstoma`, identity `89.47%`, E-value `7.03234e-68`
+**Top 5 organizmów z BLAST:**
 
-Pytania:
-1. Co oznacza E-value?
-   - Oczekiwana liczba przypadkowych trafien o podobnym lub lepszym wyniku; im mniejsza, tym bardziej istotne dopasowanie.
-2. Interpretacja listy organizmow:
-   - Dominujace trafienia dla `Hymenolepis diminuta` sa zgodne z tym, ze analizowany genom
-     nalezy do tego gatunku. Obecnosc `Hymenolepis weldensis` i `Hymenolepis microstoma`
-     wsrod najlepszych dopasowan wskazuje na bliskie pokrewienstwo ewolucyjne i konserwacje
-     badanych regionow kodujacych.
+| # | Organizm | Identity | E-value |
+|---|----------|----------|---------|
+| 1 | *Hymenolepis diminuta* | 87.69 % | 2.01 × 10⁻¹¹⁷ |
+| 2 | *Hymenolepis diminuta* | 86.89 % | 7.72 × 10⁻¹¹³ |
+| 3 | *Hymenolepis diminuta* | 97.92 % | 3.97 × 10⁻⁸³ |
+| 4 | *Hymenolepis weldensis* | 93.06 % | 1.42 × 10⁻⁷⁸ |
+| 5 | *Hymenolepis microstoma* | 89.47 % | 7.03 × 10⁻⁶⁸ |
 
-## 3. Zadanie implementacyjne (AA -> RNA)
+**Odpowiedzi na pytania:**
 
-- Skrypt: `scripts/aa_to_rna.py`
-- Wejscie: FASTA z sekwencjami aminokwasow
-- Wyjscie: FASTA z sekwencjami RNA
-- Testy: `tests/test_aa_to_rna.py`
-- Komenda uruchomienia (z katalogu `MBI`):
+> 1️⃣ **Co oznacza E-value?**
+> Oczekiwana liczba przypadkowych trafień o podobnym lub lepszym wyniku; im mniejsza, tym bardziej istotne dopasowanie.
 
-```text
+> 2️⃣ **Interpretacja listy organizmów:**
+> Dominujące trafienia dla *Hymenolepis diminuta* są zgodne z gatunkiem analizowanego genomu. Obecność *H. weldensis* i *H. microstoma* wskazuje na bliskie pokrewieństwo ewolucyjne.
+
+---
+
+## 3. 🧮 Zadanie implementacyjne — AA → RNA
+
+> **Cel:** Konwersja sekwencji aminokwasów (FASTA) do sekwencji RNA.
+
+| Element | Wartość |
+|---------|---------|
+| Skrypt | `scripts/aa_to_rna.py` |
+| Wejście | FASTA z aminokwasami |
+| Wyjście | FASTA z sekwencjami RNA |
+| Testy | `tests/test_aa_to_rna.py` |
+
+Uruchomienie:
+
+```bash
 python lab2/scripts/aa_to_rna.py lab2/input/example_amino_acids.fa lab2/output/example_rna.fa
 ```
 
-- Zweryfikowany wynik:
-  - `example_seq_1 -> AUGUCUACUAAUCAA`
-  - `example_seq_2 -> UUUUGGUAU`
-- Status: `Zaimplementowane`
+Zweryfikowany wynik:
 
+| Sekwencja | RNA |
+|-----------|-----|
+| `example_seq_1` | `AUGUCUACUAAUCAA` |
+| `example_seq_2` | `UUUUGGUAU` |
 
+Uruchomienie testów:
 
+```bash
+python -m pytest lab2/tests -q
+```
+
+> ✅ Status: **Zaimplementowane i przetestowane**
