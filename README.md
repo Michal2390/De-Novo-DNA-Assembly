@@ -4,16 +4,64 @@ This repository contains coursework materials for the MBI laboratory on de novo 
 
 ## What This Project Is
 
-This project documents a practical bioinformatics workflow for short-read assembly:
+This repository now covers the full MBI laboratory path (Lab 1 to Lab 4), not only the initial de novo assembly task. It combines practical workflows, small implementation tasks in Python, and written reports for each exercise.
 
-- simulate paired-end sequencing reads,
-- run de novo assembly,
-- evaluate assembly quality,
-- calculate GC-content with a custom script.
+At a high level, the project includes:
+
+- assembly and quality assessment of short-read sequencing data,
+- DNA annotation workflow on a selected scaffold,
+- human resequencing analysis with variant calling and annotation,
+- copy-number variation (CNV) interpretation with external structural-variant resources.
 
 ## Why This Project Exists
 
-The goal is to practice the full assembly pipeline end-to-end and learn how to interpret key quality metrics (for example N50, genome fraction, mismatches/indels, and misassemblies).
+The goal is to practice end-to-end bioinformatics analysis across multiple related topics and to document both tooling and interpretation. Each lab adds a different skill layer:
+
+- data preparation and command-line genomics workflows,
+- quality control and biological interpretation of outputs,
+- implementation of task-specific scripts (with tests),
+- reproducible reporting of methods and results.
+
+## Lab Objectives
+
+### Lab 1 - De Novo DNA Assembly
+
+Main task: build and evaluate a short-read assembly workflow.
+
+- simulate paired-end reads from a reference sequence,
+- assemble reads into contigs,
+- assess assembly quality (e.g. N50, genome fraction, misassemblies, mismatches/indels),
+- implement and test a custom GC-content script.
+
+### Lab 2 - DNA Annotation
+
+Main task: annotate a selected genomic scaffold and interpret annotation signals.
+
+- select scaffold assigned to the student index,
+- run repeat masking and summarize masked sequence statistics,
+- inspect Maker GFF annotations and count selected feature types,
+- perform functional context checks (including sequence search),
+- implement and test amino-acid to RNA conversion.
+
+### Lab 3 - Human Resequencing
+
+Main task: process resequencing reads and interpret variant calls in gene context.
+
+- map reads to reference genome and process alignments,
+- call and filter variants,
+- annotate functional consequences of detected variants,
+- focus interpretation on the IQGAP3 region,
+- implement and test variant counting per gene using VCF + refFlat.
+
+### Lab 4 - CNV Analysis (CODEX + DGV)
+
+Main task: analyze copy-number changes and annotate them with structural-variant databases.
+
+- inspect coverage patterns across exonic targets,
+- summarize CODEX CNV calls (total events, deletions, duplications, copy number states),
+- implement CNV overlap annotation against DGV entries,
+- report overlap-based evidence for deletion/duplication support,
+- document reproducible outputs and interpretation in a final report.
 
 ## Repository Contents
 
@@ -53,4 +101,5 @@ Detailed run instructions and parameters are available in:
 ## Notes
 
 The repository stores lightweight artifacts (source code and text reports). Large generated data files are intentionally excluded via `.gitignore`.
+
 
