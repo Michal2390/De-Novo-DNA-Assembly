@@ -92,22 +92,22 @@ MBI/
 │   ├── scripts/gc_content.py
 │   ├── tests/test_gc_content.py
 │   ├── output/quast_results/
-│   └── sprawozdanie_lab1_draft.md
+│   └── README.md             ← sprawozdanie
 ├── lab2/   🧩 DNA Annotation
 │   ├── scripts/  (select_scaffold, masked_stats, gff_stats, aa_to_rna)
 │   ├── tests/
 │   ├── output/   (GFF, BLAST query/results, summaries)
-│   └── sprawozdanie_lab2_draft.md
+│   └── README.md             ← sprawozdanie
 ├── lab3/   🧪 Human Resequencing
 │   ├── scripts/count_variants_per_gene.py
 │   ├── tests/
 │   ├── output/   (BAM, VCF, VEP annotation, variants-per-gene)
-│   └── sprawozdanie_lab3_draft.md
+│   └── README.md             ← sprawozdanie
 └── lab4/   📊 CNV Analysis
     ├── scripts/  (coverage_stats, codex_summary, cnv_dgv_annotation)
     ├── tests/
     ├── output/   (coverage medians, CODEX summary, DGV annotation)
-    └── sprawozdanie_lab4_draft.md
+    └── README.md             ← sprawozdanie
 ```
 
 ---
@@ -129,3 +129,4 @@ Detailed run instructions and parameters are available in each lab subfolder:
 
 > The repository stores lightweight artifacts (source code and text reports).  
 > Large generated data files are intentionally excluded via `.gitignore`.
+
