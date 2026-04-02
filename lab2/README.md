@@ -1,96 +1,152 @@
-# MBI - Lab 2 (Adnotacja DNA)
+# 🧩 Sprawozdanie — Lab 2: Adnotacja DNA
 
-Ten folder zawiera komplet plikow startowych i skryptow do realizacji laboratorium 2,
-przygotowany dla numeru albumu `307340`.
+> **Cel:** Wybór, maskowanie i adnotacja wybranego scaffoldu genomowego *Hymenolepis diminuta*, oraz implementacja konwersji aminokwasów do RNA.
 
-## Dane przypisania sekwencji
+![Lab](https://img.shields.io/badge/Lab-2-orange)
+![Tool](https://img.shields.io/badge/tools-RepeatMasker%20%7C%20Maker%20%7C%20BLAST-informational)
+![Status](https://img.shields.io/badge/status-complete-success)
+![Organism](https://img.shields.io/badge/organism-Hymenolepis%20diminuta-9cf)
 
-- numer albumu: `307340`
-- wzor: `album mod 150`
-- wyliczenie: `307340 mod 150 = 140`
-- wybrany identyfikator: `HDID_scaffold0000126`
-- zrodlo mapowania: `docs/lab2_sequences_id.txt`
+---
 
-Te dane zapisane sa tez w `input/assignment.txt`.
+## 📋 Dane wejściowe
 
-## Struktura katalogu
+| Element | Wartość |
+|---------|---------|
+| Numer albumu | `307340` |
+| Wyliczenie indeksu | `307340 mod 150 = 140` |
+| Wybrany scaffold | `HDID_scaffold0000126` |
+| Źródło mapowania | `docs/lab2_sequences_id.txt` |
+| Instrukcja | `docs/mbi_lab_2.pdf` |
 
-- `input/` - pliki wejsciowe (single scaffold, dane referencyjne)
-- `output/` - wyniki uruchomien narzedzi
-- `scripts/` - skrypty pomocnicze do krokow lab2
-- `tests/` - testy jednostkowe skryptow
-- `tmp/` - pliki tymczasowe
-- `sprawozdanie_lab2_draft.md` - szkic sprawozdania
-- `sprawozdanie_lab2_wspolne_local.md` - lokalna wersja wspolna
+---
 
-## Skrypty
+## 2.2 📥 Przygotowanie danych
 
-1. `scripts/select_scaffold.py`
-   - wybiera sekwencje po identyfikatorze wyliczonym z numeru albumu
-   - tworzy `input/single_scaffold.fa`
+- Wybrany identyfikator: `HDID_scaffold0000126`
+- Plik wyjściowy po ekstrakcji: `input/single_scaffold.fa`
 
-2. `scripts/masked_stats.py`
-   - liczy liczbe nukleotydow zamaskowanych po RepeatMasker
-
-3. `scripts/gff_stats.py`
-   - liczy zdarzenia `expressed_sequence_match` i `protein_match` z pliku GFF
-
-4. `scripts/aa_to_rna.py`
-   - zadanie implementacyjne: konwersja FASTA aminokwasow do FASTA RNA
-
-## Minimalny workflow (PowerShell, start z katalogu `MBI`)
-
-1. Umiesc pobrane FASTA (genom, bialka, mRNA) w `input/`.
-2. Wyodrebnij scaffold:
-
-```powershell
-python lab2/scripts/select_scaffold.py --album 307340 --mapping docs/lab2_sequences_id.txt --input-fasta lab2/input/scaffolds.fa --output-fasta lab2/input/single_scaffold.fa
+```bash
+python lab2/scripts/select_scaffold.py \
+  --album 307340 \
+  --mapping docs/lab2_sequences_id.txt \
+  --input-fasta lab2/input/hymenolepis_diminuta.PRJEB507.WBPS10.genomic.fa \
+  --output-fasta lab2/input/single_scaffold.fa
 ```
 
-3. Uruchom RepeatMasker i zapisz wynik jako `input/single_scaffold.fa.masked`.
-4. Policz statystyki maskowania:
+---
 
-```powershell
-python lab2/scripts/masked_stats.py lab2/input/single_scaffold.fa lab2/input/single_scaffold.fa.masked
+## 2.3 🧹 Maskowanie genomu (RepeatMasker)
+
+| Parametr | Wartość |
+|----------|---------|
+| Plik wejściowy | `input/single_scaffold.fa` |
+| Plik zamaskowany | `input/single_scaffold.fa.masked` |
+| Długość sekwencji | `118 160 bp` |
+| Zamaskowane pozycje | `759` |
+| Procent maskowania | `0.6423 %` |
+
+**Odpowiedzi na pytania:**
+
+> 1️⃣ **Ile nukleotydów zostało zamaskowanych?**
+> Zamaskowano `759` nukleotydów.
+
+> 2️⃣ **Czy to pojedyncze nukleotydy czy ciągi?**
+> To ciągi: wykryto `17` ciągów, `singletons = 0`, najdłuższy ciąg `82 bp`, średnia długość `44.65 bp`.
+
+> 3️⃣ **Jak maskowanie wpływa na mapowanie?**
+> Ogranicza fałszywe dopasowania w regionach repetytywnych i poprawia specyficzność mapowania mRNA/białek.
+
+---
+
+## 2.4 🗺️ Mapowanie i adnotacja strukturalna (Maker)
+
+- Plik GFF: `output/HDID_scaffold0000126.maker.gff`
+
+| Typ cechy | Liczba |
+|-----------|--------|
+| `expressed_sequence_match` | **8** |
+| `protein_match` | **17** |
+
+Fragment pliku GFF:
+
+```text
+##gff-version 3
+HDID_scaffold0000126  .  contig  1  118160  .  .  .  ID=HDID_scaffold0000126
+HDID_scaffold0000126  repeatmasker  match  4417  5012  891  +  .  ID=...Mariner-9_HSal
+HDID_scaffold0000126  repeatmasker  match  10784  10833  236  +  .  ID=...Arnold4
 ```
 
-5. Uruchom Maker i wskaz wygenerowany `.gff`.
-6. Policz statystyki GFF:
+**Odpowiedzi na pytania:**
 
-```powershell
-python lab2/scripts/gff_stats.py lab2/input/your_maker_output.gff
+> 1️⃣ **Jakie informacje są w GFF?**
+> Położenia cech genomowych (start/stop), typ cechy, źródło adnotacji, strand, atrybuty ID/Name.
+
+> 2️⃣ **Znaczenie typów:**
+> - `expressed_sequence_match` — dopasowanie do transkryptu (mRNA/EST),
+> - `protein_match` — dopasowanie do sekwencji białka.
+
+---
+
+## 2.5 🔍 Adnotacja funkcjonalna (BLASTX)
+
+Wybrany rekord `expressed_sequence_match`:
+
+```text
+HDID_scaffold0000126  blastn  expressed_sequence_match  53705  57114  224  -  .
+ID=HDID_scaffold0000126:hit:7:3.2.0.0;Name=HDID_0000794201-mRNA-1
 ```
 
-7. Zadanie implementacyjne (AA -> RNA):
+Wyodrębniona sekwencja DNA (53705–57114) zapisana w `output/blastx_query.fa`.
 
-```powershell
-python lab2/scripts/aa_to_rna.py lab2/input/amino_acids.fa lab2/output/rna.fa
+**Top 5 organizmów z BLAST:**
+
+| # | Organizm | Identity | E-value |
+|---|----------|----------|---------|
+| 1 | *Hymenolepis diminuta* | 87.69 % | 2.01 × 10⁻¹¹⁷ |
+| 2 | *Hymenolepis diminuta* | 86.89 % | 7.72 × 10⁻¹¹³ |
+| 3 | *Hymenolepis diminuta* | 97.92 % | 3.97 × 10⁻⁸³ |
+| 4 | *Hymenolepis weldensis* | 93.06 % | 1.42 × 10⁻⁷⁸ |
+| 5 | *Hymenolepis microstoma* | 89.47 % | 7.03 × 10⁻⁶⁸ |
+
+**Odpowiedzi na pytania:**
+
+> 1️⃣ **Co oznacza E-value?**
+> Oczekiwana liczba przypadkowych trafień o podobnym lub lepszym wyniku; im mniejsza, tym bardziej istotne dopasowanie.
+
+> 2️⃣ **Interpretacja listy organizmów:**
+> Dominujące trafienia dla *Hymenolepis diminuta* są zgodne z gatunkiem analizowanego genomu. Obecność *H. weldensis* i *H. microstoma* wskazuje na bliskie pokrewieństwo ewolucyjne.
+
+---
+
+## 3. 🧮 Zadanie implementacyjne — AA → RNA
+
+> **Cel:** Konwersja sekwencji aminokwasów (FASTA) do sekwencji RNA.
+
+| Element | Wartość |
+|---------|---------|
+| Skrypt | `scripts/aa_to_rna.py` |
+| Wejście | FASTA z aminokwasami |
+| Wyjście | FASTA z sekwencjami RNA |
+| Testy | `tests/test_aa_to_rna.py` |
+
+Uruchomienie:
+
+```bash
+python lab2/scripts/aa_to_rna.py lab2/input/example_amino_acids.fa lab2/output/example_rna.fa
 ```
 
-Zweryfikowany przyklad na `lab2/input/example_amino_acids.fa` tworzy plik
-`lab2/output/example_rna.fa` z rekordami:
-- `example_seq_1 -> AUGUCUACUAAUCAA`
-- `example_seq_2 -> UUUUGGUAU`
+Zweryfikowany wynik:
 
-## Testy
+| Sekwencja | RNA |
+|-----------|-----|
+| `example_seq_1` | `AUGUCUACUAAUCAA` |
+| `example_seq_2` | `UUUUGGUAU` |
 
-```powershell
+Uruchomienie testów:
+
+```bash
 python -m pytest lab2/tests -q
 ```
 
-## Wyniki wykonania dla 307340
-
-- RepeatMasker:
-  - `lab2/input/single_scaffold.fa.masked`
-  - `sequence_length=118160`, `masked_positions=759`, `masked_percent=0.6423`
-- Maker:
-  - glowny GFF: `lab2/output/HDID_scaffold0000126.maker.gff`
-  - pelny output: `lab2/output/single_scaffold.fa.maker.output`
-  - liczebnosci cech: `expressed_sequence_match=8`, `protein_match=17`
-- BLASTX:
-  - zapytanie: `lab2/output/blastx_query.fa`
-  - wynik XML: `lab2/output/blastx_result.xml`
-  - top 5 organizmow: `Hymenolepis diminuta` (3 trafienia), `Hymenolepis weldensis`, `Hymenolepis microstoma`
-
-
-
+> ✅ Status: **Zaimplementowane i przetestowane**
