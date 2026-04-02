@@ -1,41 +1,56 @@
-# De Novo DNA Assembly
+# 🧬 MBI Bioinformatics Labs
 
-This repository contains coursework materials for the MBI laboratory on de novo DNA assembly.
+> Academic bioinformatics coursework spanning MBI Labs 1–4: de novo assembly, DNA annotation, human resequencing, and CNV analysis with CODEX and DGV-supported interpretation.
 
-## What This Project Is
+![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python&logoColor=white)
+![R](https://img.shields.io/badge/R-CODEX-276DC3?logo=r&logoColor=white)
+![License](https://img.shields.io/badge/license-academic-lightgrey)
+![Labs](https://img.shields.io/badge/labs-1--4-success)
 
-This repository now covers the full MBI laboratory path (Lab 1 to Lab 4), not only the initial de novo assembly task. It combines practical workflows, small implementation tasks in Python, and written reports for each exercise.
+---
+
+## 📌 What This Project Is
+
+This repository covers the full MBI laboratory path (Lab 1 to Lab 4). It combines practical workflows, small implementation tasks in Python, and written reports for each exercise.
 
 At a high level, the project includes:
 
-- assembly and quality assessment of short-read sequencing data,
-- DNA annotation workflow on a selected scaffold,
-- human resequencing analysis with variant calling and annotation,
-- copy-number variation (CNV) interpretation with external structural-variant resources.
+| # | Topic | Key Output |
+|---|-------|-----------|
+| 1 | 🔬 De Novo Assembly | Contigs, QUAST report, GC-content script |
+| 2 | 🧩 DNA Annotation | Masked scaffold, Maker GFF, AA→RNA script |
+| 3 | 🧪 Human Resequencing | BAM/VCF, VEP annotation, variants-per-gene |
+| 4 | 📊 CNV Analysis | CODEX summary, DGV overlap annotation |
 
-## Why This Project Exists
+---
+
+## 🎯 Why This Project Exists
 
 The goal is to practice end-to-end bioinformatics analysis across multiple related topics and to document both tooling and interpretation. Each lab adds a different skill layer:
 
-- data preparation and command-line genomics workflows,
-- quality control and biological interpretation of outputs,
-- implementation of task-specific scripts (with tests),
-- reproducible reporting of methods and results.
+- 🛠️ data preparation and command-line genomics workflows,
+- 🔍 quality control and biological interpretation of outputs,
+- 💻 implementation of task-specific scripts (with tests),
+- 📝 reproducible reporting of methods and results.
 
-## Lab Objectives
+---
 
-### Lab 1 - De Novo DNA Assembly
+## 🔬 Lab Objectives
 
-Main task: build and evaluate a short-read assembly workflow.
+### 🧬 Lab 1 — De Novo DNA Assembly
+
+> **Main task:** build and evaluate a short-read assembly workflow.
 
 - simulate paired-end reads from a reference sequence,
 - assemble reads into contigs,
-- assess assembly quality (e.g. N50, genome fraction, misassemblies, mismatches/indels),
+- assess assembly quality (N50, genome fraction, misassemblies, mismatches/indels),
 - implement and test a custom GC-content script.
 
-### Lab 2 - DNA Annotation
+---
 
-Main task: annotate a selected genomic scaffold and interpret annotation signals.
+### 🧩 Lab 2 — DNA Annotation
+
+> **Main task:** annotate a selected genomic scaffold and interpret annotation signals.
 
 - select scaffold assigned to the student index,
 - run repeat masking and summarize masked sequence statistics,
@@ -43,9 +58,11 @@ Main task: annotate a selected genomic scaffold and interpret annotation signals
 - perform functional context checks (including sequence search),
 - implement and test amino-acid to RNA conversion.
 
-### Lab 3 - Human Resequencing
+---
 
-Main task: process resequencing reads and interpret variant calls in gene context.
+### 🧪 Lab 3 — Human Resequencing
+
+> **Main task:** process resequencing reads and interpret variant calls in gene context.
 
 - map reads to reference genome and process alignments,
 - call and filter variants,
@@ -53,9 +70,11 @@ Main task: process resequencing reads and interpret variant calls in gene contex
 - focus interpretation on the IQGAP3 region,
 - implement and test variant counting per gene using VCF + refFlat.
 
-### Lab 4 - CNV Analysis (CODEX + DGV)
+---
 
-Main task: analyze copy-number changes and annotate them with structural-variant databases.
+### 📊 Lab 4 — CNV Analysis (CODEX + DGV)
+
+> **Main task:** analyze copy-number changes and annotate them with structural-variant databases.
 
 - inspect coverage patterns across exonic targets,
 - summarize CODEX CNV calls (total events, deletions, duplications, copy number states),
@@ -63,43 +82,50 @@ Main task: analyze copy-number changes and annotate them with structural-variant
 - report overlap-based evidence for deletion/duplication support,
 - document reproducible outputs and interpretation in a final report.
 
-## Repository Contents
+---
 
-- `lab1/` - complete Lab 1 materials:
-  - GC-content script (`lab1/scripts/gc_content.py`)
-  - script test (`lab1/tests/test_gc_content.py`)
-  - working report (`lab1/sprawozdanie_lab1_draft.md`)
-  - QUAST outputs (`lab1/output/quast_results/`)
+## 📁 Repository Contents
 
-- `lab2/` - complete Lab 2 materials (DNA annotation):
-  - scaffold selection, masking, and GFF stats scripts
-  - amino acid to RNA conversion task with tests
-  - completed lab report (`lab2/sprawozdanie_lab2_draft.md`)
-  - selected lightweight outputs (GFF, BLAST query/results, summaries)
+```
+MBI/
+├── lab1/   🔬 De Novo Assembly
+│   ├── scripts/gc_content.py
+│   ├── tests/test_gc_content.py
+│   ├── output/quast_results/
+│   └── sprawozdanie_lab1_draft.md
+├── lab2/   🧩 DNA Annotation
+│   ├── scripts/  (select_scaffold, masked_stats, gff_stats, aa_to_rna)
+│   ├── tests/
+│   ├── output/   (GFF, BLAST query/results, summaries)
+│   └── sprawozdanie_lab2_draft.md
+├── lab3/   🧪 Human Resequencing
+│   ├── scripts/count_variants_per_gene.py
+│   ├── tests/
+│   ├── output/   (BAM, VCF, VEP annotation, variants-per-gene)
+│   └── sprawozdanie_lab3_draft.md
+└── lab4/   📊 CNV Analysis
+    ├── scripts/  (coverage_stats, codex_summary, cnv_dgv_annotation)
+    ├── tests/
+    ├── output/   (coverage medians, CODEX summary, DGV annotation)
+    └── sprawozdanie_lab4_draft.md
+```
 
-- `lab3/` - complete Lab 3 materials (human resequencing):
-  - mapping + variant calling outputs (BAM/VCF and summaries)
-  - variant annotation summary for IQGAP3 region
-  - implementation task script: variants-per-gene from refFlat + VCF
-  - completed lab report (`lab3/sprawozdanie_lab3_draft.md`)
+---
 
-- `lab4/` - complete Lab 4 materials (CNV analysis with CODEX and DGV annotation):
-  - coverage median statistics for chromosome 20 samples
-  - CODEX CNV summary (total calls, deletions, duplications, copy number 0 checks)
-  - implementation task script: CNV annotation against DGV overlaps
-  - completed lab report (`lab4/sprawozdanie_lab4_draft.md`)
+## 🚀 Quick Start
 
-## Quick Start
+Detailed run instructions and parameters are available in each lab subfolder:
 
-Detailed run instructions and parameters are available in:
+| Lab | README |
+|-----|--------|
+| 🔬 Lab 1 | [`lab1/README.md`](lab1/README.md) |
+| 🧩 Lab 2 | [`lab2/README.md`](lab2/README.md) |
+| 🧪 Lab 3 | [`lab3/README.md`](lab3/README.md) |
+| 📊 Lab 4 | [`lab4/README.md`](lab4/README.md) |
 
-- `lab1/README.md`
-- `lab2/README.md`
-- `lab3/README.md`
-- `lab4/README.md`
+---
 
-## Notes
+## 📎 Notes
 
-The repository stores lightweight artifacts (source code and text reports). Large generated data files are intentionally excluded via `.gitignore`.
-
-
+> The repository stores lightweight artifacts (source code and text reports).  
+> Large generated data files are intentionally excluded via `.gitignore`.
