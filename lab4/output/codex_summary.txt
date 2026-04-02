@@ -1,0 +1,4 @@
+total_calls=73
+deletions=44
+duplications=29
+homozygous_deletions_copy_no_0=0

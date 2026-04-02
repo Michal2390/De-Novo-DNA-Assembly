@@ -1,0 +1,7 @@
+lab=4
+album=307340
+instruction=docs/mbi_lab_4.pdf
+codex_calls_file=input/TGP99_20_4_CODEX_frac.txt
+dgv_file=lab4_tmp_download/dgvMerged2.txt.gz
+notes=Implementacja zadania 5 wykonana w Python (adnotacja CNV vs DGV)
+

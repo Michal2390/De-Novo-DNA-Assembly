@@ -1,0 +1,3 @@
+samples=99
+min_sample=NA12003	median=22.9630
+max_sample=NA18912	median=135.8333

@@ -1,0 +1,11 @@
+# Mapowanie
+bwa index chr1.fa
+bwa mem -t 4 chr1.fa coriell_chr1.fq -o coriell_chr1.sam
+samtools sort -O BAM -o coriell_chr1.bam coriell_chr1.sam
+samtools index coriell_chr1.bam
+
+# Warianty
+bcftools mpileup -Ob -o coriell_chr1.bcf -f chr1.fa coriell_chr1.bam
+bcftools call -mv -Ov -o coriell_chr1.vcf coriell_chr1.bcf
+bcftools filter -i "INFO/DP>10" -Ov -o coriell_chr1_filtered.vcf coriell_chr1.vcf
+

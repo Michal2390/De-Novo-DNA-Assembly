@@ -1,0 +1,6 @@
+sample_name	chr	cnv	st_bp	ed_bp	dgv_del_overlap_any	dgv_dup_overlap_any	dgv_any_overlap_80pct
+NA07357	chr20	del	1638233	1896162	32	8	0
+NA11829	chr20	del	1558921	1600612	73	18	34
+NA11829	chr20	dup	1638233	1896162	32	8	0
+NA11830	chr20	del	1558921	1600612	73	18	34
+NA11831	chr20	del	1638233	1896162	32	8	0

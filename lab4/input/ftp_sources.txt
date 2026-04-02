@@ -1,0 +1,10 @@
+# Dodatkowe zrodla przekazane przez uzytkownika
+ftp://ftp.ebi.ac.uk/pub/databases/wormbase/parasite/releases/WBPS10/species/hymenolepis_diminuta/PRJEB507/hymenolepis_diminuta.PRJEB507.WBPS10.protein.fa.gz
+ftp://ftp.ebi.ac.uk/pub/databases/wormbase/parasite/releases/WBPS10/species/hymenolepis_diminuta/PRJEB507/hymenolepis_diminuta.PRJEB507.WBPS10.mRNA_transcripts.fa.gz
+
+# Zrodla wykorzystane w lab4
+https://github.com/NGSchoolEU/2017/raw/master/CNV_detection/data/bed.tar.gz
+https://github.com/NGSchoolEU/2017/raw/master/CNV_detection/data/coverage.tar.gz
+https://github.com/NGSchoolEU/2017/raw/master/CNV_detection/data/codex_output_all.tar.gz
+https://hgdownload.soe.ucsc.edu/goldenPath/hg19/database/dgvMerged.txt.gz
+
