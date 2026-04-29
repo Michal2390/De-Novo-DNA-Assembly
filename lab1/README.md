@@ -1,4 +1,4 @@
-# 🔬 Sprawozdanie — Lab 1: De Novo DNA Assembly
+# 🔬 Sprawozdanie - Lab 1: De Novo DNA Assembly
 
 > **Cel:** Symulacja odczytów paired-end, złożenie genomu de novo oraz ocena jakości asemblacji.
 
