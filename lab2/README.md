@@ -1,4 +1,4 @@
-# 🧩 Sprawozdanie — Lab 2: Adnotacja DNA
+# 🧩 Sprawozdanie - Lab 2: Adnotacja DNA
 
 > **Cel:** Wybór, maskowanie i adnotacja wybranego scaffoldu genomowego *Hymenolepis diminuta*, oraz implementacja konwersji aminokwasów do RNA.
 
