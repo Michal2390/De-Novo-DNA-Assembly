@@ -1,0 +1,2 @@
+##gff-version 3
+output_contigs.fa_18_96901	QUAST	possible_assembly_error	79851	79866	.	.	.	Name=Extensive misassembly;type=relocation;Note=inconsistency is -649400,scaffold gap is present

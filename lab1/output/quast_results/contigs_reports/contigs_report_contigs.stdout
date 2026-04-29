@@ -1,0 +1,385 @@
+Aligning contigs to reference...
+	Aligning contigs to the reference
+Filtering alignments...
+Parsing coords...
+Loading reference...
+	Loaded [NZ_CP022077.1]
+	Total Regions: 1
+	Total Region Length: 1641468
+Analyzing contigs...
+CONTIG: output_contigs.fa_0_65516 (65516bp)
+Best alignment score: 65509.4 (LEN: 65516, IDY: 99.99), Total number of alignments: 1
+		One align captures most of this contig: 25 65544 | 1 65516 | 65520 65516 | 99.99 | NZ_CP022077.1 output_contigs.fa_0_65516
+
+CONTIG: output_contigs.fa_1_10056 (10056bp)
+Best alignment score: 10056.0 (LEN: 10056, IDY: 100.00), Total number of alignments: 1
+		One align captures most of this contig: 312756 322811 | 1 10056 | 10056 10056 | 100.0 | NZ_CP022077.1 output_contigs.fa_1_10056
+
+CONTIG: output_contigs.fa_2_2258 (2258bp)
+Best alignment score: 2258.0 (LEN: 2258, IDY: 100.00), Total number of alignments: 1
+		One align captures most of this contig: 291816 294073 | 2258 1 | 2258 2258 | 100.0 | NZ_CP022077.1 output_contigs.fa_2_2258
+
+CONTIG: output_contigs.fa_3_38527 (38527bp)
+Best alignment score: 33280.0 (LEN: 33280, IDY: 100.00), Total number of alignments: 4
+			Looking for the best set of alignments (out of 4 total alignments)
+		This contig has several significant sets of alignments. [An ambiguously mapped contig]
+		Using only the very best set (option --ambiguity-usage is set to "one").
+			The best set is below. Score: 38103.0, number of alignments: 4, unaligned bases: 409
+		This contig is misassembled.
+			Real Alignment 1: 1602847 1606295 | 1 3449 | 3449 3449 | 100.0 | NZ_CP022077.1 output_contigs.fa_3_38527
+			  Scaffold gap between these two alignments, gap lengths difference (reference vs assembly) = 8 (local)
+			Real Alignment 2: 1606488 1607495 | 3634 4641 | 1008 1008 | 100.0 | NZ_CP022077.1 output_contigs.fa_3_38527
+			  Scaffold gap between these two alignments, gap lengths difference (reference vs assembly) = -7 (local)
+			Real Alignment 3: 1607605 1607985 | 4758 5138 | 381 381 | 100.0 | NZ_CP022077.1 output_contigs.fa_3_38527
+			  Scaffold gap between these two alignments, gap lengths difference (reference vs assembly) = 69 (local)
+			Real Alignment 4: 1608164 1641443 | 5248 38527 | 33280 33280 | 100.0 | NZ_CP022077.1 output_contigs.fa_3_38527
+
+CONTIG: output_contigs.fa_4_176143 (176143bp)
+Best alignment score: 176125.4 (LEN: 176143, IDY: 99.99), Total number of alignments: 1
+		One align captures most of this contig: 681332 857484 | 1 176143 | 176153 176143 | 99.99 | NZ_CP022077.1 output_contigs.fa_4_176143
+
+CONTIG: output_contigs.fa_5_15055 (15055bp)
+Best alignment score: 9116.0 (LEN: 9116, IDY: 100.00), Total number of alignments: 3
+			Looking for the best set of alignments (out of 3 total alignments)
+			The best set is below. Score: 13997.0, number of alignments: 3, unaligned bases: 1048
+		This contig is misassembled.
+			Real Alignment 1: 295929 298971 | 1 3043 | 3043 3043 | 100.0 | NZ_CP022077.1 output_contigs.fa_5_15055
+			  Scaffold gap between these two alignments, gap lengths difference (reference vs assembly) = -80 (local)
+			Real Alignment 2: 299643 308758 | 3795 12910 | 9116 9116 | 100.0 | NZ_CP022077.1 output_contigs.fa_5_15055
+			  Scaffold gap between these two alignments, gap lengths difference (reference vs assembly) = 1 (local)
+			Real Alignment 3: 309057 310904 | 13208 15055 | 1848 1848 | 100.0 | NZ_CP022077.1 output_contigs.fa_5_15055
+
+CONTIG: output_contigs.fa_6_7151 (7151bp)
+Best alignment score: 7151.0 (LEN: 7151, IDY: 100.00), Total number of alignments: 1
+		One align captures most of this contig: 286923 294073 | 1 7151 | 7151 7151 | 100.0 | NZ_CP022077.1 output_contigs.fa_6_7151
+
+CONTIG: output_contigs.fa_7_10056 (10056bp)
+Best alignment score: 10056.0 (LEN: 10056, IDY: 100.00), Total number of alignments: 1
+		One align captures most of this contig: 312756 322811 | 10056 1 | 10056 10056 | 100.0 | NZ_CP022077.1 output_contigs.fa_7_10056
+
+CONTIG: output_contigs.fa_8_189340 (189340bp)
+Best alignment score: 89693.0 (LEN: 89693, IDY: 100.00), Total number of alignments: 3
+			Looking for the best set of alignments (out of 3 total alignments)
+			The best set is below. Score: 189034.0, number of alignments: 3, unaligned bases: 296
+		This contig is misassembled.
+			Real Alignment 1: 970443 1060135 | 1 89693 | 89693 89693 | 100.0 | NZ_CP022077.1 output_contigs.fa_8_189340
+			  Scaffold gap between these two alignments, gap lengths difference (reference vs assembly) = 0 (local)
+			Real Alignment 2: 1060238 1100291 | 89796 129849 | 40054 40054 | 100.0 | NZ_CP022077.1 output_contigs.fa_8_189340
+			  Scaffold gap between these two alignments, gap lengths difference (reference vs assembly) = 0 (local)
+			Real Alignment 3: 1100486 1159782 | 130044 189340 | 59297 59297 | 100.0 | NZ_CP022077.1 output_contigs.fa_8_189340
+
+CONTIG: output_contigs.fa_9_57816 (57816bp)
+Best alignment score: 57816.0 (LEN: 57816, IDY: 100.00), Total number of alignments: 1
+		One align captures most of this contig: 229468 287283 | 57816 1 | 57816 57816 | 100.0 | NZ_CP022077.1 output_contigs.fa_9_57816
+
+CONTIG: output_contigs.fa_10_87681 (87681bp)
+Best alignment score: 73625.0 (LEN: 73625, IDY: 100.00), Total number of alignments: 2
+			Looking for the best set of alignments (out of 2 total alignments)
+			The best set is below. Score: 87569.0, number of alignments: 2, unaligned bases: 107
+		This contig is misassembled.
+			Real Alignment 1: 937191 951139 | 13949 1 | 13949 13949 | 100.0 | NZ_CP022077.1 output_contigs.fa_10_87681
+			  Scaffold gap between these two alignments, gap lengths difference (reference vs assembly) = -6 (local)
+			Real Alignment 2: 863465 937089 | 87681 14057 | 73625 73625 | 100.0 | NZ_CP022077.1 output_contigs.fa_10_87681
+
+CONTIG: output_contigs.fa_11_38534 (38534bp)
+Best alignment score: 33284.0 (LEN: 33284, IDY: 100.00), Total number of alignments: 2
+			Looking for the best set of alignments (out of 2 total alignments)
+			The best set is below. Score: 38365.0, number of alignments: 2, unaligned bases: 109
+		This contig is misassembled.
+			Real Alignment 1: 1608160 1641443 | 33284 1 | 33284 33284 | 100.0 | NZ_CP022077.1 output_contigs.fa_11_38534
+			  Scaffold gap between these two alignments, gap lengths difference (reference vs assembly) = 9 (local)
+			Real Alignment 2: 1602847 1608041 | 38534 33394 | 5195 5141 | 98.93 | NZ_CP022077.1 output_contigs.fa_11_38534
+
+CONTIG: output_contigs.fa_12_189346 (189346bp)
+Best alignment score: 89831.0 (LEN: 89831, IDY: 100.00), Total number of alignments: 3
+			Looking for the best set of alignments (out of 3 total alignments)
+			The best set is below. Score: 188864.0, number of alignments: 3, unaligned bases: 472
+		This contig is misassembled.
+			Real Alignment 1: 1100664 1159782 | 59119 1 | 59119 59119 | 100.0 | NZ_CP022077.1 output_contigs.fa_12_189346
+			  Scaffold gap between these two alignments, gap lengths difference (reference vs assembly) = -6 (local)
+			Real Alignment 2: 1060539 1100462 | 99250 59327 | 39924 39924 | 100.0 | NZ_CP022077.1 output_contigs.fa_12_189346
+			  Scaffold gap between these two alignments, gap lengths difference (reference vs assembly) = 0 (local)
+			Real Alignment 3: 970443 1060273 | 189346 99516 | 89831 89831 | 100.0 | NZ_CP022077.1 output_contigs.fa_12_189346
+
+CONTIG: output_contigs.fa_13_97085 (97085bp)
+Best alignment score: 56250.0 (LEN: 56250, IDY: 100.00), Total number of alignments: 2
+			Looking for the best set of alignments (out of 2 total alignments)
+			The best set is below. Score: 96889.3, number of alignments: 2, unaligned bases: 150
+		This contig is misassembled.
+			Real Alignment 1: 188338 229064 | 1 40685 | 40727 40685 | 99.9 | NZ_CP022077.1 output_contigs.fa_13_97085
+			  Scaffold gap between these two alignments, gap lengths difference (reference vs assembly) = -1 (local)
+			Real Alignment 2: 229214 285463 | 40836 97085 | 56250 56250 | 100.0 | NZ_CP022077.1 output_contigs.fa_13_97085
+
+CONTIG: output_contigs.fa_14_355724 (355724bp)
+Best alignment score: 263879.0 (LEN: 263879, IDY: 100.00), Total number of alignments: 3
+			Looking for the best set of alignments (out of 3 total alignments)
+			The best set is below. Score: 355407.4, number of alignments: 3, unaligned bases: 301
+		This contig is misassembled.
+			Real Alignment 1: 325021 360986 | 1 35966 | 35966 35966 | 100.0 | NZ_CP022077.1 output_contigs.fa_14_355724
+			  Scaffold gap between these two alignments, gap lengths difference (reference vs assembly) = 7 (local)
+			Real Alignment 2: 361181 416766 | 36154 91731 | 55586 55578 | 99.99 | NZ_CP022077.1 output_contigs.fa_14_355724
+			  Scaffold gap between these two alignments, gap lengths difference (reference vs assembly) = 6 (local)
+			Real Alignment 3: 416887 680765 | 91846 355724 | 263879 263879 | 100.0 | NZ_CP022077.1 output_contigs.fa_14_355724
+
+CONTIG: output_contigs.fa_15_176139 (176139bp)
+Best alignment score: 99411.0 (LEN: 99411, IDY: 100.00), Total number of alignments: 3
+			Looking for the best set of alignments (out of 3 total alignments)
+			The best set is below. Score: 175840.0, number of alignments: 3, unaligned bases: 289
+		This contig is misassembled.
+			Real Alignment 1: 825388 857484 | 32097 1 | 32097 32097 | 100.0 | NZ_CP022077.1 output_contigs.fa_15_176139
+			  Scaffold gap between these two alignments, gap lengths difference (reference vs assembly) = 2 (local)
+			Real Alignment 2: 780945 825286 | 76538 32197 | 44342 44342 | 100.0 | NZ_CP022077.1 output_contigs.fa_15_176139
+			  Scaffold gap between these two alignments, gap lengths difference (reference vs assembly) = 11 (local)
+			Real Alignment 3: 681332 780743 | 176139 76729 | 99412 99411 | 100.0 | NZ_CP022077.1 output_contigs.fa_15_176139
+
+CONTIG: output_contigs.fa_16_115631 (115631bp)
+Best alignment score: 103536.6 (LEN: 103547, IDY: 99.99), Total number of alignments: 2
+			Looking for the best set of alignments (out of 2 total alignments)
+			The best set is below. Score: 115463.6, number of alignments: 2, unaligned bases: 152
+		This contig is misassembled.
+			Real Alignment 1: 66515 78446 | 1 11932 | 11932 11932 | 100.0 | NZ_CP022077.1 output_contigs.fa_16_115631
+			  Scaffold gap between these two alignments, gap lengths difference (reference vs assembly) = 3 (local)
+			Real Alignment 2: 78602 182156 | 12085 115631 | 103555 103547 | 99.99 | NZ_CP022077.1 output_contigs.fa_16_115631
+
+CONTIG: output_contigs.fa_17_355732 (355732bp)
+Best alignment score: 263811.0 (LEN: 263811, IDY: 100.00), Total number of alignments: 3
+			Looking for the best set of alignments (out of 3 total alignments)
+			The best set is below. Score: 355342.5, number of alignments: 3, unaligned bases: 374
+		This contig is misassembled.
+			Real Alignment 1: 416955 680765 | 263811 1 | 263811 263811 | 100.0 | NZ_CP022077.1 output_contigs.fa_17_355732
+			  Scaffold gap between these two alignments, gap lengths difference (reference vs assembly) = 7 (local)
+			Real Alignment 2: 361449 416805 | 319302 263954 | 55357 55349 | 99.99 | NZ_CP022077.1 output_contigs.fa_17_355732
+			  Scaffold gap between these two alignments, gap lengths difference (reference vs assembly) = -2 (local)
+			Real Alignment 3: 325021 361218 | 355732 319535 | 36198 36198 | 100.0 | NZ_CP022077.1 output_contigs.fa_17_355732
+
+CONTIG: output_contigs.fa_18_96901 (96901bp)
+Best alignment score: 72989.0 (LEN: 72989, IDY: 100.00), Total number of alignments: 3
+			Looking for the best set of alignments (out of 3 total alignments)
+			The best set is below. Score: 96332.6, number of alignments: 3, unaligned bases: 313
+		This contig is misassembled.
+			Real Alignment 1: 1520631 1527193 | 1 6563 | 6563 6563 | 100.0 | NZ_CP022077.1 output_contigs.fa_18_96901
+			  Scaffold gap between these two alignments, gap lengths difference (reference vs assembly) = -1 (local)
+			Real Alignment 2: 1527492 1600480 | 6863 79851 | 72989 72989 | 100.0 | NZ_CP022077.1 output_contigs.fa_18_96901
+			  Extensive misassembly (relocation, inconsistency = -649400, scaffold gap is present) between these two alignments
+			Real Alignment 3: 951095 968130 | 79866 96901 | 17036 17036 | 100.0 | NZ_CP022077.1 output_contigs.fa_18_96901
+
+CONTIG: output_contigs.fa_19_153903 (153903bp)
+Best alignment score: 131118.0 (LEN: 131118, IDY: 100.00), Total number of alignments: 2
+			Looking for the best set of alignments (out of 2 total alignments)
+			The best set is below. Score: 153723.5, number of alignments: 2, unaligned bases: 170
+		This contig is misassembled.
+			Real Alignment 1: 1297037 1319655 | 22615 1 | 22619 22615 | 99.98 | NZ_CP022077.1 output_contigs.fa_19_153903
+			  Scaffold gap between these two alignments, gap lengths difference (reference vs assembly) = 4 (local)
+			Real Alignment 2: 1165745 1296862 | 153903 22786 | 131118 131118 | 100.0 | NZ_CP022077.1 output_contigs.fa_19_153903
+
+CONTIG: output_contigs.fa_20_153901 (153901bp)
+Best alignment score: 130942.0 (LEN: 130942, IDY: 100.00), Total number of alignments: 2
+			Looking for the best set of alignments (out of 2 total alignments)
+			The best set is below. Score: 153739.4, number of alignments: 2, unaligned bases: 152
+		This contig is misassembled.
+			Real Alignment 1: 1165745 1296686 | 1 130942 | 130942 130942 | 100.0 | NZ_CP022077.1 output_contigs.fa_20_153901
+			  Scaffold gap between these two alignments, gap lengths difference (reference vs assembly) = 6 (local)
+			Real Alignment 2: 1296845 1319655 | 131095 153901 | 22811 22807 | 99.98 | NZ_CP022077.1 output_contigs.fa_20_153901
+
+CONTIG: output_contigs.fa_21_65492 (65492bp)
+Best alignment score: 65485.5 (LEN: 65492, IDY: 99.99), Total number of alignments: 1
+		One align captures most of this contig: 49 65544 | 65492 1 | 65496 65492 | 99.99 | NZ_CP022077.1 output_contigs.fa_21_65492
+
+CONTIG: output_contigs.fa_22_102783 (102783bp)
+Best alignment score: 49648.0 (LEN: 49648, IDY: 100.00), Total number of alignments: 3
+			Looking for the best set of alignments (out of 3 total alignments)
+			The best set is below. Score: 102321.0, number of alignments: 3, unaligned bases: 452
+		This contig is misassembled.
+			Real Alignment 1: 1500982 1514649 | 13668 1 | 13668 13668 | 100.0 | NZ_CP022077.1 output_contigs.fa_22_102783
+			  Scaffold gap between these two alignments, gap lengths difference (reference vs assembly) = -1 (local)
+			Real Alignment 2: 1461868 1500877 | 52788 13774 | 39010 39015 | 100.0 | NZ_CP022077.1 output_contigs.fa_22_102783
+			  Scaffold gap between these two alignments, gap lengths difference (reference vs assembly) = 61 (local)
+			Real Alignment 3: 1411812 1461459 | 102783 53136 | 49648 49648 | 100.0 | NZ_CP022077.1 output_contigs.fa_22_102783
+
+CONTIG: output_contigs.fa_23_79899 (79899bp)
+Best alignment score: 72934.0 (LEN: 72934, IDY: 100.00), Total number of alignments: 2
+			Looking for the best set of alignments (out of 2 total alignments)
+			The best set is below. Score: 79777.0, number of alignments: 2, unaligned bases: 117
+		This contig is misassembled.
+			Real Alignment 1: 1527601 1600534 | 72934 1 | 72934 72934 | 100.0 | NZ_CP022077.1 output_contigs.fa_23_79899
+			  Scaffold gap between these two alignments, gap lengths difference (reference vs assembly) = 5 (local)
+			Real Alignment 2: 1520631 1527478 | 79899 73052 | 6848 6848 | 100.0 | NZ_CP022077.1 output_contigs.fa_23_79899
+
+CONTIG: output_contigs.fa_24_102778 (102778bp)
+Best alignment score: 49533.0 (LEN: 49533, IDY: 100.00), Total number of alignments: 3
+			Looking for the best set of alignments (out of 3 total alignments)
+			The best set is below. Score: 102120.0, number of alignments: 3, unaligned bases: 648
+		This contig is misassembled.
+			Real Alignment 1: 1411812 1461344 | 1 49533 | 49533 49533 | 100.0 | NZ_CP022077.1 output_contigs.fa_24_102778
+			  Scaffold gap between these two alignments, gap lengths difference (reference vs assembly) = 59 (local)
+			Real Alignment 2: 1461800 1500597 | 49930 88734 | 38798 38805 | 100.0 | NZ_CP022077.1 output_contigs.fa_24_102778
+			  Scaffold gap between these two alignments, gap lengths difference (reference vs assembly) = 8 (local)
+			Real Alignment 3: 1500858 1514649 | 88987 102778 | 13792 13792 | 100.0 | NZ_CP022077.1 output_contigs.fa_24_102778
+
+CONTIG: output_contigs.fa_25_104685 (104685bp)
+Best alignment score: 87507.0 (LEN: 87507, IDY: 100.00), Total number of alignments: 2
+			Looking for the best set of alignments (out of 2 total alignments)
+			The best set is below. Score: 104538.0, number of alignments: 2, unaligned bases: 142
+		This contig is misassembled.
+			Real Alignment 1: 863465 950966 | 1 87507 | 87502 87507 | 100.0 | NZ_CP022077.1 output_contigs.fa_25_104685
+			  Scaffold gap between these two alignments, gap lengths difference (reference vs assembly) = -14 (local)
+			Real Alignment 2: 951095 968130 | 87650 104685 | 17036 17036 | 100.0 | NZ_CP022077.1 output_contigs.fa_25_104685
+
+CONTIG: output_contigs.fa_26_14980 (14980bp)
+Best alignment score: 13096.0 (LEN: 13096, IDY: 100.00), Total number of alignments: 2
+			Looking for the best set of alignments (out of 2 total alignments)
+			The best set is below. Score: 14861.0, number of alignments: 2, unaligned bases: 114
+		This contig is misassembled.
+			Real Alignment 1: 309135 310904 | 1770 1 | 1770 1770 | 100.0 | NZ_CP022077.1 output_contigs.fa_26_14980
+			  Scaffold gap between these two alignments, gap lengths difference (reference vs assembly) = -4 (local)
+			Real Alignment 2: 295929 309024 | 14980 1885 | 13096 13096 | 100.0 | NZ_CP022077.1 output_contigs.fa_26_14980
+
+CONTIG: output_contigs.fa_27_115633 (115633bp)
+Best alignment score: 99111.0 (LEN: 99111, IDY: 100.00), Total number of alignments: 3
+			Looking for the best set of alignments (out of 3 total alignments)
+			The best set is below. Score: 115177.0, number of alignments: 3, unaligned bases: 446
+		This contig is misassembled.
+			Real Alignment 1: 83046 182156 | 99111 1 | 99111 99111 | 100.0 | NZ_CP022077.1 output_contigs.fa_27_115633
+			  Scaffold gap between these two alignments, gap lengths difference (reference vs assembly) = 7 (local)
+			Real Alignment 2: 78863 82818 | 103287 99332 | 3956 3956 | 100.0 | NZ_CP022077.1 output_contigs.fa_27_115633
+			  Scaffold gap between these two alignments, gap lengths difference (reference vs assembly) = 2 (local)
+			Real Alignment 3: 66515 78634 | 115633 103514 | 12120 12120 | 100.0 | NZ_CP022077.1 output_contigs.fa_27_115633
+
+CONTIG: output_contigs.fa_33_3043 (3043bp)
+Best alignment score: 3043.0 (LEN: 3043, IDY: 100.00), Total number of alignments: 3
+		This contig has 3 significant alignments. [An ambiguously mapped contig]
+		Using only first of these alignment (option --ambiguity-usage is set to "one"):
+			Alignment: 860466 863508 | 1 3043 | 3043 3043 | 100.0 | NZ_CP022077.1 output_contigs.fa_33_3043
+			Skipping alignment 1162756 1165798 | 1 3043 | 3043 3043 | 100.0 | NZ_CP022077.1 output_contigs.fa_33_3043
+			Skipping alignment 1517632 1520674 | 1 3043 | 3043 3043 | 100.0 | NZ_CP022077.1 output_contigs.fa_33_3043
+
+CONTIG: output_contigs.fa_35_3031 (3031bp)
+Best alignment score: 3031.0 (LEN: 3031, IDY: 100.00), Total number of alignments: 3
+		This contig has 3 significant alignments. [An ambiguously mapped contig]
+		Using only first of these alignment (option --ambiguity-usage is set to "one"):
+			Alignment: 1159729 1162759 | 3031 1 | 3031 3031 | 100.0 | NZ_CP022077.1 output_contigs.fa_35_3031
+			Skipping alignment 857439 860469 | 3031 1 | 3031 3031 | 100.0 | NZ_CP022077.1 output_contigs.fa_35_3031
+			Skipping alignment 1514604 1517634 | 3031 1 | 3031 3031 | 100.0 | NZ_CP022077.1 output_contigs.fa_35_3031
+
+CONTIG: output_contigs.fa_40_90234 (90234bp)
+Best alignment score: 90234.0 (LEN: 90234, IDY: 100.00), Total number of alignments: 1
+		One align captures most of this contig: 1320598 1410831 | 1 90234 | 90234 90234 | 100.0 | NZ_CP022077.1 output_contigs.fa_40_90234
+
+CONTIG: output_contigs.fa_51_3031 (3031bp)
+Best alignment score: 3031.0 (LEN: 3031, IDY: 100.00), Total number of alignments: 3
+		This contig has 3 significant alignments. [An ambiguously mapped contig]
+		Using only first of these alignment (option --ambiguity-usage is set to "one"):
+			Alignment: 857439 860469 | 1 3031 | 3031 3031 | 100.0 | NZ_CP022077.1 output_contigs.fa_51_3031
+			Skipping alignment 1514604 1517634 | 1 3031 | 3031 3031 | 100.0 | NZ_CP022077.1 output_contigs.fa_51_3031
+			Skipping alignment 1159729 1162759 | 1 3031 | 3031 3031 | 100.0 | NZ_CP022077.1 output_contigs.fa_51_3031
+
+CONTIG: output_contigs.fa_61_585 (585bp)
+Best alignment score: 585.0 (LEN: 585, IDY: 100.00), Total number of alignments: 3
+		This contig has 3 significant alignments. [An ambiguously mapped contig]
+		Using only first of these alignment (option --ambiguity-usage is set to "one"):
+			Alignment: 1319602 1320186 | 585 1 | 585 585 | 100.0 | NZ_CP022077.1 output_contigs.fa_61_585
+			Skipping alignment 1411243 1411827 | 1 585 | 585 585 | 100.0 | NZ_CP022077.1 output_contigs.fa_61_585
+			Skipping alignment 65946 66530 | 1 585 | 585 585 | 100.0 | NZ_CP022077.1 output_contigs.fa_61_585
+
+CONTIG: output_contigs.fa_68_695 (695bp)
+Best alignment score: 695.0 (LEN: 695, IDY: 100.00), Total number of alignments: 2
+		This contig has 2 significant alignments. [An ambiguously mapped contig]
+		Using only first of these alignment (option --ambiguity-usage is set to "one"):
+			Alignment: 311314 312008 | 1 695 | 695 695 | 100.0 | NZ_CP022077.1 output_contigs.fa_68_695
+			Skipping alignment 294488 295182 | 1 695 | 695 695 | 100.0 | NZ_CP022077.1 output_contigs.fa_68_695
+
+CONTIG: output_contigs.fa_74_585 (585bp)
+Best alignment score: 585.0 (LEN: 585, IDY: 100.00), Total number of alignments: 3
+		This contig has 3 significant alignments. [An ambiguously mapped contig]
+		Using only first of these alignment (option --ambiguity-usage is set to "one"):
+			Alignment: 1319602 1320186 | 1 585 | 585 585 | 100.0 | NZ_CP022077.1 output_contigs.fa_74_585
+			Skipping alignment 1411243 1411827 | 585 1 | 585 585 | 100.0 | NZ_CP022077.1 output_contigs.fa_74_585
+			Skipping alignment 65946 66530 | 585 1 | 585 585 | 100.0 | NZ_CP022077.1 output_contigs.fa_74_585
+
+CONTIG: output_contigs.fa_79_3043 (3043bp)
+Best alignment score: 3043.0 (LEN: 3043, IDY: 100.00), Total number of alignments: 3
+		This contig has 3 significant alignments. [An ambiguously mapped contig]
+		Using only first of these alignment (option --ambiguity-usage is set to "one"):
+			Alignment: 860466 863508 | 3043 1 | 3043 3043 | 100.0 | NZ_CP022077.1 output_contigs.fa_79_3043
+			Skipping alignment 1517632 1520674 | 3043 1 | 3043 3043 | 100.0 | NZ_CP022077.1 output_contigs.fa_79_3043
+			Skipping alignment 1162756 1165798 | 3043 1 | 3043 3043 | 100.0 | NZ_CP022077.1 output_contigs.fa_79_3043
+
+CONTIG: output_contigs.fa_81_2340 (2340bp)
+Best alignment score: 2340.0 (LEN: 2340, IDY: 100.00), Total number of alignments: 2
+		This contig has 2 significant alignments. [An ambiguously mapped contig]
+		Using only first of these alignment (option --ambiguity-usage is set to "one"):
+			Alignment: 968157 970496 | 1 2340 | 2340 2340 | 100.0 | NZ_CP022077.1 output_contigs.fa_81_2340
+			Skipping alignment 1600561 1602900 | 1 2340 | 2340 2340 | 100.0 | NZ_CP022077.1 output_contigs.fa_81_2340
+
+CONTIG: output_contigs.fa_82_16985 (16985bp)
+Best alignment score: 16985.0 (LEN: 16985, IDY: 100.00), Total number of alignments: 1
+		One align captures most of this contig: 951146 968130 | 16985 1 | 16985 16985 | 100.0 | NZ_CP022077.1 output_contigs.fa_82_16985
+
+CONTIG: output_contigs.fa_89_2340 (2340bp)
+Best alignment score: 2340.0 (LEN: 2340, IDY: 100.00), Total number of alignments: 2
+		This contig has 2 significant alignments. [An ambiguously mapped contig]
+		Using only first of these alignment (option --ambiguity-usage is set to "one"):
+			Alignment: 1600561 1602900 | 2340 1 | 2340 2340 | 100.0 | NZ_CP022077.1 output_contigs.fa_89_2340
+			Skipping alignment 968157 970496 | 2340 1 | 2340 2340 | 100.0 | NZ_CP022077.1 output_contigs.fa_89_2340
+
+CONTIG: output_contigs.fa_104_40748 (40748bp)
+Best alignment score: 40707.3 (LEN: 40748, IDY: 99.90), Total number of alignments: 1
+		One align captures most of this contig: 188338 229127 | 40748 1 | 40790 40748 | 99.9 | NZ_CP022077.1 output_contigs.fa_104_40748
+
+CONTIG: output_contigs.fa_109_578 (578bp)
+Best alignment score: 578.0 (LEN: 578, IDY: 100.00), Total number of alignments: 1
+		One align captures most of this contig: 289952 290529 | 578 1 | 578 578 | 100.0 | NZ_CP022077.1 output_contigs.fa_109_578
+
+CONTIG: output_contigs.fa_120_4494 (4494bp)
+Best alignment score: 4494.0 (LEN: 4494, IDY: 100.00), Total number of alignments: 1
+		One align captures most of this contig: 182996 187489 | 4494 1 | 4494 4494 | 100.0 | NZ_CP022077.1 output_contigs.fa_120_4494
+
+CONTIG: output_contigs.fa_136_90234 (90234bp)
+Best alignment score: 90234.0 (LEN: 90234, IDY: 100.00), Total number of alignments: 1
+		One align captures most of this contig: 1320598 1410831 | 90234 1 | 90234 90234 | 100.0 | NZ_CP022077.1 output_contigs.fa_136_90234
+
+CONTIG: output_contigs.fa_147_4494 (4494bp)
+Best alignment score: 4494.0 (LEN: 4494, IDY: 100.00), Total number of alignments: 1
+		One align captures most of this contig: 182996 187489 | 1 4494 | 4494 4494 | 100.0 | NZ_CP022077.1 output_contigs.fa_147_4494
+
+CONTIG: output_contigs.fa_163_695 (695bp)
+Best alignment score: 695.0 (LEN: 695, IDY: 100.00), Total number of alignments: 2
+		This contig has 2 significant alignments. [An ambiguously mapped contig]
+		Using only first of these alignment (option --ambiguity-usage is set to "one"):
+			Alignment: 294488 295182 | 695 1 | 695 695 | 100.0 | NZ_CP022077.1 output_contigs.fa_163_695
+			Skipping alignment 311314 312008 | 695 1 | 695 695 | 100.0 | NZ_CP022077.1 output_contigs.fa_163_695
+
+Analyzing coverage...
+Writing SNPs into /work/output/quast_results/contigs_reports/minimap_output/contigs.used_snps
+
+Analysis is finished!
+Founded SNPs were written into /work/output/quast_results/contigs_reports/minimap_output/contigs.used_snps
+
+Results:
+	Local Misassemblies: 0
+	Misassemblies: 1
+		Relocations: 1
+		Translocations: 0
+		Inversions: 0
+	Scaffold gap extensive misassemblies: 0
+	Scaffold gap local misassemblies: 31
+	Misassembled Contigs: 1
+	Misassembled Contig Bases: 96901
+	Misassemblies Inter-Contig Overlap ("Extra" Aligned Bases): 0
+Unaligned Contigs: 0 + 0 part
+Half Unaligned Contigs with Misassemblies: 0
+Unaligned Bases in Fully and Partially Unaligned Contigs: 0
+
+Ambiguously Mapped Contigs: 11
+Total Bases in Ambiguously Mapped Contigs: 57915
+"Extra" Aligned Bases in Ambiguously Mapped Contigs: 0
+Note that --allow-ambiguity option was set to "one" and only first alignment per each of these contigs was used (there is no "extra" aligned bases).
+
+	Covered Bases in Reference: 1622569
+	Raw Aligned Bases in Assembly: 3239639
+	Total Aligned Bases in Assembly (with "Extras"): 3239639
+
+	SNPs: 4
+	Insertions: 17
+	Deletions: 189
+

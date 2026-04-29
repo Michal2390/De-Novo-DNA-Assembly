@@ -1,0 +1,62 @@
+/quast-5.3.0/quast.py contigs.fa -o quast_output
+
+Version: 5.3.0
+
+System information:
+  OS: Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.35 (linux_64)
+  Python version: 3.10.12
+  CPUs number: 16
+
+Started: 2026-04-29 03:28:21
+
+Logging to /work/quast_output/quast.log
+NOTICE: Maximum number of threads is set to 4 (use --threads option to set it manually)
+
+CWD: /work
+Main parameters: 
+  MODE: default, threads: 4, min contig length: 500, min alignment length: 65, min alignment IDY: 95.0, \
+  ambiguity: one, min local misassembly length: 200, min extensive misassembly length: 1000
+
+Contigs:
+  Pre-processing...
+  contigs.fa ==> contigs
+
+2026-04-29 03:28:22
+Running Basic statistics processor...
+  Contig files: 
+    contigs
+  Calculating N50 and L50...
+    contigs, N50 = 153901, L50 = 8, auN = 172479.4, Total length = 3245900, GC % = 30.46, # N's per 100 kbp =  218.83
+  Drawing Nx plot...
+    saved to /work/quast_output/basic_stats/Nx_plot.pdf
+  Drawing cumulative plot...
+    saved to /work/quast_output/basic_stats/cumulative_plot.pdf
+  Drawing GC content plot...
+    saved to /work/quast_output/basic_stats/GC_content_plot.pdf
+  Drawing contigs GC content plot...
+    saved to /work/quast_output/basic_stats/contigs_GC_content_plot.pdf
+Done.
+
+NOTICE: Genes are not predicted by default. Use --gene-finding or --glimmer option to enable it.
+
+2026-04-29 03:28:24
+Creating large visual summaries...
+This may take a while: press Ctrl-C to skip this step..
+  1 of 2: Creating PDF with all tables and plots...
+  2 of 2: Creating Icarus viewers...
+Done
+
+2026-04-29 03:28:24
+RESULTS:
+  Text versions of total report are saved to /work/quast_output/report.txt, report.tsv, and report.tex
+  Text versions of transposed total report are saved to /work/quast_output/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
+  HTML version (interactive tables and plots) is saved to /work/quast_output/report.html
+  PDF version (tables and plots) is saved to /work/quast_output/report.pdf
+  Icarus (contig browser) is saved to /work/quast_output/icarus.html
+  Log is saved to /work/quast_output/quast.log
+
+Finished: 2026-04-29 03:28:25
+Elapsed time: 0:00:03.443365
+NOTICEs: 2; WARNINGs: 0; non-fatal ERRORs: 0
+
+Thank you for using QUAST!

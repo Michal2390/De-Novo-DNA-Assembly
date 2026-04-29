@@ -1,0 +1,14 @@
+reference chromosomes:
+	NZ_CP022077.1 (total length: 1641468 bp, total length without N's: 1641468 bp, maximal covered length: 1622569 bp)
+
+total genome size: 1641468
+
+gap min size: 50
+partial gene/operon min size: 100
+
+
+
+assembly                 | genome    | duplication | gaps      | genes     | partial   | operons   | partial   |
+                         | fraction  | ratio       | number    |           | genes     |           | operons   |
+========================================================================================================================
+contigs                  | 98.849    | 1.997       | 17        | -         | -         | -         | -         |
