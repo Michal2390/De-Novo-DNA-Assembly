@@ -1,4 +1,4 @@
-# 📊 Sprawozdanie — Lab 4: Analiza CNV (CODEX + DGV)
+# 📊 Sprawozdanie - Lab 4: Analiza CNV (CODEX + DGV)
 
 > **Cel:** Analiza głębokości pokrycia eksonów, podsumowanie zmian liczby kopii DNA wykrytych przez CODEX oraz adnotacja CNV z użyciem bazy wariantów strukturalnych DGV.
 
