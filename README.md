@@ -37,7 +37,7 @@ The goal is to practice end-to-end bioinformatics analysis across multiple relat
 
 ## 🔬 Lab Objectives
 
-### 🧬 Lab 1 — De Novo DNA Assembly
+### 🧬 Lab 1 - De Novo DNA Assembly
 
 > **Main task:** build and evaluate a short-read assembly workflow.
 
@@ -48,7 +48,7 @@ The goal is to practice end-to-end bioinformatics analysis across multiple relat
 
 ---
 
-### 🧩 Lab 2 — DNA Annotation
+### 🧩 Lab 2 - DNA Annotation
 
 > **Main task:** annotate a selected genomic scaffold and interpret annotation signals.
 
@@ -60,7 +60,7 @@ The goal is to practice end-to-end bioinformatics analysis across multiple relat
 
 ---
 
-### 🧪 Lab 3 — Human Resequencing
+### 🧪 Lab 3 - Human Resequencing
 
 > **Main task:** process resequencing reads and interpret variant calls in gene context.
 
@@ -72,7 +72,7 @@ The goal is to practice end-to-end bioinformatics analysis across multiple relat
 
 ---
 
-### 📊 Lab 4 — CNV Analysis (CODEX + DGV)
+### 📊 Lab 4 - CNV Analysis (CODEX + DGV)
 
 > **Main task:** analyze copy-number changes and annotate them with structural-variant databases.
 
