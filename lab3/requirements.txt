@@ -1,4 +1,3 @@
-pandas>=2.2
-pyranges>=0.0.129
 pytest>=9.0
+
 

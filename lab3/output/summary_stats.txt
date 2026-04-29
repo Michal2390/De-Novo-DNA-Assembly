@@ -1,0 +1,8 @@
+fastq_size_bytes=26474782
+sam_size_bytes=31190659
+bam_size_bytes=4776208
+read_length_min=151
+read_length_max=151
+read_length_median=151
+variants_all=3
+variants_filtered_dp_gt_10=3

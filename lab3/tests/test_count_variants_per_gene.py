@@ -23,7 +23,7 @@ def test_count_variants_per_gene(tmp_path: Path) -> None:
     )
 
     out = count_variants_per_gene(vcf, refflat)
-
-    got = {row.GeneSymbol: int(row.VariantCount) for row in out.itertuples(index=False)}
+    got = {gene: int(count) for gene, count in out}
     assert got == {"GENE1": 1, "GENE2": 1, "GENE3": 1}
+
 

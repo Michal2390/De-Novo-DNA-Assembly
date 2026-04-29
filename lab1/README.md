@@ -49,13 +49,30 @@ Wygenerowane pliki:
 
 ## 4. 🏗️ Asemblacja de novo (DNAasm)
 
-Wykonane polecenie:
+Wykonane polecenie (uruchomione w Docker'ze):
 
 ```bash
-dnaasm assemble -1 output/pirs_reads_100_400_1.fq -2 output/pirs_reads_100_400_2.fq -o output/contigs.fa
+docker run --rm -v /tmp:/tmp -w /tmp wkusmirek/dnaasm dnaasm -assembly \
+  -k 55 \
+  -genome_length 1641468 \
+  -paired_reads_algorithm 1 \
+  -insert_size_mean_inward 400 \
+  -insert_size_std_dev_inward 20 \
+  -single_edge_counter_threshold 5 \
+  -i1_1 pirs_reads_100_400_1.fq \
+  -i1_2 pirs_reads_100_400_2.fq \
+  -output_file_name contigs.fa
 ```
 
-Wynik: `output/contigs.fa`
+**Parametry:**
+- `-k 55`: Wymiar grafu de Bruijn'a (k-mer)
+- `-genome_length 1641468`: Długość genomu referencyjnego w par bazowych
+- `-paired_reads_algorithm 1`: Obsługa odczytów sparowanych (forward-reverse)
+- `-insert_size_mean_inward 400 bp`: Średnia odległość między końcami sparowanych odczytów
+- `-insert_size_std_dev_inward 20`: Odchylenie standardowe od średniej odległości
+- `-single_edge_counter_threshold 5`: Próg krawędzi w grafie de Bruijn'a
+
+Wynik: `output/contigs.fa` (rozmiar: ~3.12 MB, liczba kontigów: 274)
 
 ---
 
@@ -64,18 +81,16 @@ Wynik: `output/contigs.fa`
 Wykonane polecenie:
 
 ```bash
-quast output/contigs.fa -r input/ref.fa -o output/quast_results
+docker run --rm -v /tmp:/tmp -w /tmp staphb/quast:5.3.0 \
+  python /quast-5.3.0/quast.py -R ref.fa -o quast_results contigs.fa
 ```
 
-Wyniki (`output/quast_results/report.tsv`):
-
-| Metryka | Wartość |
-|---------|---------|
-| N50 | — |
-| Genome fraction (%) | — |
-| Misassemblies | — |
-| Mismatches per 100 kbp | — |
-| Indels per 100 kbp | — |
+Metryk QUAST:
+- **Liczba kontigów**: 274
+- **Całkowita długość**: ~3.12 MBytes
+- **Średnia długość kontiga**: ~11,394 bp  
+- **Mediana długości**: 216 bp
+- **N50**: 53,050 bp
 
 > Szczegółowy raport HTML dostępny w `output/quast_results/report.html`.
 

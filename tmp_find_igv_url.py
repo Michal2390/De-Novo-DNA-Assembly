@@ -1,23 +1,13 @@
 import re
 import urllib.request
+from urllib.parse import urljoin
 
 url = "https://software.broadinstitute.org/software/igv/download"
 html = urllib.request.urlopen(url, timeout=30).read().decode("utf-8", "ignore")
 print("html_len", len(html))
 
-patterns = [
-    r"https?://[^\"']+IGV[^\"']+\\.zip",
-    r"https?://[^\"']+igv[^\"']+\\.zip",
-    r"https?://[^\"']+IGV[^\"']+\\.exe",
-    r"https?://[^\"']+igv[^\"']+\\.exe",
-    r"https?://[^\"']+IGV[^\"']+\\.jar",
-    r"https?://[^\"']+igv[^\"']+\\.jar",
-]
-
-links = set()
-for pat in patterns:
-    links.update(re.findall(pat, html))
-
-for link in sorted(links):
-    print(link)
-
+hrefs = re.findall(r'href="([^"]+)"', html, re.IGNORECASE)
+for href in hrefs:
+    low = href.lower()
+    if "igv" in low or "download" in low or low.endswith(".zip") or low.endswith(".exe"):
+        print(urljoin(url, href))

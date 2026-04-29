@@ -1,0 +1,4 @@
+chrom	pos	ref	alt	most_severe_consequence	gene_symbol	biotype	consequence_terms	is_coding
+chr1	156500321	G	A	intron_variant	IQGAP3	protein_coding	intron_variant	no
+chr1	156510654	T	A	missense_variant	IQGAP3	protein_coding	missense_variant	yes
+chr1	156520987	C	A	intron_variant	IQGAP3	protein_coding	intron_variant	no
