@@ -1,33 +1,23 @@
-﻿# Python
-__pycache__/
-*.pyc
+# Python/IDE
 .venv/
-# Heavy generated data
-lab1/input/
-lab1/tmp/
-lab1/output/*.fq
-lab1/output/*.fa
-lab1/output/*.info
-lab1/output/*.distr
-# Local-only report
-lab1/sprawozdanie_lab1_wspolne_local.md
+.pytest_cache/
+.idea/
+**/__pycache__/
 
-# Lab2 generated and large files
+# Local helper scripts
+/tmp_urls.py
+
+# Large/generated data from labs
+lab1/output/
+lab1/tmp/
 lab2/tmp/
 lab2/output/single_scaffold.fa.maker.output/
+
+# Keep selected small lab2 artifacts but ignore huge source datasets
 lab2/input/hymenolepis_diminuta.PRJEB507.WBPS10.genomic.fa
 lab2/input/hymenolepis_diminuta.PRJEB507.WBPS10.genomic.fa.gz
 lab2/input/hymenolepis_diminuta.PRJEB507.WBPS10.mRNA_transcripts.fa
 lab2/input/hymenolepis_diminuta.PRJEB507.WBPS10.mRNA_transcripts.fa.gz
 lab2/input/hymenolepis_diminuta.PRJEB507.WBPS10.protein.fa
 lab2/input/hymenolepis_diminuta.PRJEB507.WBPS10.protein.fa.gz
-
-# Lab3 generated and heavy files
-lab3/tmp/
-lab3/input/chr1.fa
-lab3/input/chr1.fa.gz
-lab3/input/coriell_chr1.fq
-lab3/input/coriell_chr1.fq.gz
-lab3/output/*.sam
-lab3/output/*.bcf
 

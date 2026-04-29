@@ -4,17 +4,9 @@
 from __future__ import annotations
 
 import argparse
-import importlib
 from pathlib import Path
 
-
-def _get_seqio():
-    try:
-        return importlib.import_module("Bio.SeqIO")
-    except ModuleNotFoundError as exc:
-        raise SystemExit(
-            "Brak Biopython. Zainstaluj zaleznosci: pip install -r lab1/requirements.txt"
-        ) from exc
+from Bio import SeqIO
 
 
 def gc_percent(sequence: str) -> float:
@@ -29,17 +21,15 @@ def gc_percent(sequence: str) -> float:
 def compute_file_gc(fasta_path: Path) -> tuple[float, int]:
     total_gc = 0
     total_acgt = 0
-    seqio = _get_seqio()
 
-    with fasta_path.open("r", encoding="utf-8") as handle:
-        for rec in seqio.parse(handle, "fasta"):
-            seq = str(rec.seq).upper()
-            g = seq.count("G")
-            c = seq.count("C")
-            a = seq.count("A")
-            t = seq.count("T")
-            total_gc += g + c
-            total_acgt += a + c + g + t
+    for rec in SeqIO.parse(str(fasta_path), "fasta"):
+        seq = str(rec.seq).upper()
+        g = seq.count("G")
+        c = seq.count("C")
+        a = seq.count("A")
+        t = seq.count("T")
+        total_gc += g + c
+        total_acgt += a + c + g + t
 
     if total_acgt == 0:
         return 0.0, 0
@@ -61,3 +51,4 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
+
