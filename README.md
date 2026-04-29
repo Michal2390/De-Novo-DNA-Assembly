@@ -1,6 +1,6 @@
 # 🧬 MBI Bioinformatics Labs
 
-> Academic bioinformatics coursework spanning MBI Labs 1–4: de novo assembly, DNA annotation, human resequencing, and CNV analysis with CODEX and DGV-supported interpretation.
+> Academic bioinformatics coursework spanning MBI (Metody BioInformatyki) Labs 1–4: de novo assembly, DNA annotation, human resequencing, and CNV analysis with CODEX and DGV-supported interpretation.
 
 ![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python&logoColor=white)
 ![R](https://img.shields.io/badge/R-CODEX-276DC3?logo=r&logoColor=white)
@@ -11,7 +11,7 @@
 
 ## 📌 What This Project Is
 
-This repository covers the full MBI laboratory path (Lab 1 to Lab 4). It combines practical workflows, small implementation tasks in Python, and written reports for each exercise.
+This repository covers the full MBI (Metody BioInformatyki) laboratory path (Lab 1 to Lab 4). It combines practical workflows, small implementation tasks in Python, and written reports for each exercise.
 
 At a high level, the project includes:
 
@@ -37,7 +37,7 @@ The goal is to practice end-to-end bioinformatics analysis across multiple relat
 
 ## 🔬 Lab Objectives
 
-### 🧬 Lab 1 — De Novo DNA Assembly
+### 🧬 Lab 1 - De Novo DNA Assembly
 
 > **Main task:** build and evaluate a short-read assembly workflow.
 
@@ -48,7 +48,7 @@ The goal is to practice end-to-end bioinformatics analysis across multiple relat
 
 ---
 
-### 🧩 Lab 2 — DNA Annotation
+### 🧩 Lab 2 - DNA Annotation
 
 > **Main task:** annotate a selected genomic scaffold and interpret annotation signals.
 
@@ -60,7 +60,7 @@ The goal is to practice end-to-end bioinformatics analysis across multiple relat
 
 ---
 
-### 🧪 Lab 3 — Human Resequencing
+### 🧪 Lab 3 - Human Resequencing
 
 > **Main task:** process resequencing reads and interpret variant calls in gene context.
 
@@ -72,7 +72,7 @@ The goal is to practice end-to-end bioinformatics analysis across multiple relat
 
 ---
 
-### 📊 Lab 4 — CNV Analysis (CODEX + DGV)
+### 📊 Lab 4 - CNV Analysis (CODEX + DGV)
 
 > **Main task:** analyze copy-number changes and annotate them with structural-variant databases.
 
