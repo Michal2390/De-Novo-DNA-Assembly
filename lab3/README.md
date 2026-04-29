@@ -1,4 +1,4 @@
-# 🧪 Sprawozdanie — Lab 3: Resekwencjonowanie genomu człowieka
+# 🧪 Sprawozdanie - Lab 3: Resekwencjonowanie genomu człowieka
 
 > **Cel:** Mapowanie odczytów WES do genomu hg19, wykrywanie i filtrowanie wariantów w regionie IQGAP3, adnotacja funkcjonalna przez Ensembl VEP, implementacja zliczania wariantów per gen.
 
